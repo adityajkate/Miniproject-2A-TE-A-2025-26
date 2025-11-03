@@ -1,0 +1,94 @@
+/* Map Legend */
+.map-legend {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 16px;
+  border-radius: 8px;
+  border: 2px solid #007bff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-width: 180px;
+  pointer-events: none; /* Don't affect layout or scrolling */
+}
+
+.map-legend h4 {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.legend-color {
+  width: 20px;
+  height: 16px;
+  border-radius: 4px;
+  margin-right: 8px;
+  border: 1px solid #ddd;
+}
+
+.legend-color.unpredicted {
+  background: #f8f9fa;
+  border: 1px dashed #666;
+}
+
+.legend-color.low {
+  background: #34a853;
+}
+
+.legend-color.medium {
+  background: #fbbc04;
+}
+
+.legend-color.high {
+  background: #ea4335;
+}
+
+.legend-color.critical {
+  background: #d93025;
+}
+
+.legend-item span {
+  color: #555;
+  font-weight: 500;
+}
+
+.legend-footer {
+  margin-top: 12px;
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .map-legend {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    padding: 12px;
+  }
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  .map-legend {
+    background: white !important;
+    border: 3px solid black !important;
+    color: black !important;
+  }
+}

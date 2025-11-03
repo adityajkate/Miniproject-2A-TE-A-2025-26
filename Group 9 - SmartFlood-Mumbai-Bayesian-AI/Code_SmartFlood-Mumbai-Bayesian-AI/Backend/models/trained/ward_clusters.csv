@@ -1,0 +1,25 @@
+Ward,Ward_Name,Rainfall_mm_mean,Rainfall_mm_max,Rainfall_24hr_max,flood_frequency,elevation_encoded,drainage_encoded,cluster,risk_zone
+A,"Colaba, Churchgate",5.37,472.83,472.83,0.003,0,3,1,Very High Risk
+B,Masjid Bunder,5.37,552.9,552.9,0.001,1,0,3,Medium Risk
+C,Marine Lines,5.37,552.9,552.9,0.002,0,3,1,Very High Risk
+D,Grant Road,5.37,552.9,552.9,0.001,1,0,3,Medium Risk
+E,"Byculla, Mazgaon",5.37,552.9,552.9,0.002,0,3,1,Very High Risk
+FN,Matunga,5.37,391.53,391.53,0.001,1,0,3,Medium Risk
+FS,Parel,5.37,398.64,398.64,0.0,1,0,3,Medium Risk
+GN,Dadar,5.37,519.11,519.11,0.0,1,0,3,Medium Risk
+GS,Worli,5.37,552.9,552.9,0.001,0,3,1,Very High Risk
+HE,Santacruz East,6.5,223.94,223.94,0.0,2,1,2,High Risk
+HW,Bandra West,6.5,343.99,343.99,0.001,1,0,2,High Risk
+KE,Vile Parle East,6.5,552.9,552.9,0.0,2,1,0,Low Risk
+KW,Andheri West,6.5,314.61,314.61,0.0,2,1,2,High Risk
+L,Kurla,6.5,389.05,389.05,0.001,1,0,2,High Risk
+ME,Mankhurd,6.5,552.9,552.9,0.0,2,0,0,Low Risk
+MW,Chembur,6.5,343.99,343.99,0.001,1,0,2,High Risk
+N,Ghatkopar,6.5,234.87,234.87,0.001,1,0,2,High Risk
+PN,Malad,6.5,426.63,426.63,0.0,2,1,0,Low Risk
+PS,Goregaon,6.5,426.63,426.63,0.0,2,1,0,Low Risk
+RC,Borivali,6.5,378.4,378.4,0.0,2,1,2,High Risk
+RN,Dahisar,6.5,519.11,519.11,0.0,2,1,0,Low Risk
+RS,Kandivali,6.5,552.9,552.9,0.0,2,2,0,Low Risk
+S,Powai,6.5,552.9,552.9,0.0,2,1,0,Low Risk
+T,Mulund,6.25,552.9,552.9,0.0,2,1,0,Low Risk

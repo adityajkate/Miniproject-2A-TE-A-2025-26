@@ -1,0 +1,137 @@
+/* Routing Map right-side panel styles and robust map visuals */
+
+/* Use combined selector since both classes are on the same element */
+.routing-scope.routing-layout {
+  display: flex;
+  gap: 16px;
+}
+
+/* Give the map container a definite height so MapContainer height:100% works */
+.routing-scope .routing-map {
+  flex: 1;
+  height: 620px;
+}
+
+.routing-scope .routing-panel {
+  width: 380px;
+  background: #ffffff;
+  color: #222;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.06);
+}
+
+.routing-scope .routing-panel h3 {
+  margin-top: 0;
+}
+
+.routing-scope .routing-hint {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.routing-scope .routing-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.routing-scope .routing-grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.routing-scope .input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+}
+
+.routing-scope .btn {
+  padding: 10px;
+  background: #0d6efd;
+  color: #fff;
+  border-radius: 6px;
+}
+
+.routing-scope .btn:hover {
+  background: #0b5ed7;
+}
+
+.routing-scope .btn-wide {
+  width: 100%;
+  padding: 12px;
+}
+
+.routing-scope .section {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.routing-scope .toggle-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+  align-items: center;
+}
+
+.routing-scope .mode-label {
+  font-weight: 600;
+}
+
+/* Leaflet enhancements for clarity (scoped) */
+.routing-scope .leaflet-container .route-line {
+  filter: drop-shadow(0 0 2px rgba(0, 0, 0, 0.35));
+}
+
+.routing-scope .leaflet-container .blocked-line {
+  stroke-linecap: round;
+}
+
+/* Ward tooltip for better readability */
+.routing-scope .routing-ward-tooltip {
+  background: rgba(255, 255, 255, 0.95);
+  color: #111;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 2px 6px;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.12);
+}
+
+/* High-contrast start/end markers */
+.start-marker,
+.end-marker {
+  display: grid;
+  place-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-weight: 800;
+  font-size: 13px;
+  color: #fff;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+.start-marker {
+  background: #1e90ff;
+  border: 2px solid #0b5ed7;
+}
+.end-marker {
+  background: #ff3b30;
+  border: 2px solid #c12722;
+}
+
+/* Speed readout */
+.routing-scope .speed-label {
+  display: inline-block;
+  min-width: 64px;
+}

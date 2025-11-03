@@ -1,0 +1,432 @@
+.ward-details {
+  padding: 20px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.ward-details h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+  border-bottom: 1px solid #e1e5e9;
+  padding-bottom: 12px;
+}
+
+/* No Selection State */
+.no-selection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #666;
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.no-selection-icon {
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.no-selection p {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* Ward Info */
+.ward-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.ward-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.loading-spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Prediction Details */
+.prediction-details {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.risk-status {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.risk-badge {
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.probability {
+  font-size: 14px;
+  color: #666;
+  font-weight: 500;
+}
+
+.risk-description {
+  padding: 12px;
+  background: #f8f9fa;
+  border-radius: 6px;
+  border-left: 3px solid #4285f4;
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+.additional-info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.info-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9ecef;
+  font-size: 14px;
+}
+
+.info-item:last-child {
+  border-bottom: none;
+}
+
+.info-item strong {
+  color: #333;
+}
+
+.info-item span {
+  color: #666;
+}
+
+/* Ward Geographic Information */
+.ward-geographic-info {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.ward-geographic-info h4 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ward-geographic-info h4::before {
+  content: "📍";
+  font-size: 18px;
+}
+
+.geo-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.geo-info-grid .info-item {
+  background: white;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  border-bottom: none;
+}
+
+.geo-info-grid .info-item strong {
+  font-size: 12px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.geo-info-grid .info-item span {
+  font-size: 14px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Single column for coordinates on smaller screens */
+@media (max-width: 480px) {
+  .geo-info-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* No prediction state */
+.no-prediction {
+  padding: 20px;
+  text-align: center;
+}
+
+.info-message {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border: 2px dashed #007bff;
+  border-radius: 12px;
+  padding: 24px;
+  margin: 16px 0;
+}
+
+.info-message h4 {
+  margin: 0 0 12px 0;
+  color: #007bff;
+  font-size: 18px;
+}
+
+.info-message p {
+  margin: 0 0 16px 0;
+  color: #495057;
+  line-height: 1.5;
+}
+
+.ml-info {
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+}
+
+.ml-info small {
+  color: #495057;
+  line-height: 1.6;
+}
+
+/* Instruction note styling */
+.instruction-note {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.instruction-note small {
+  color: #007bff;
+  font-weight: 500;
+}
+
+/* Risk Legend */
+.risk-legend {
+  border-top: 1px solid #e9ecef;
+  padding-top: 20px;
+}
+
+.risk-legend h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: #555;
+}
+
+.legend-color {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.legend-color.low {
+  background: #34a853;
+}
+
+.legend-color.medium {
+  background: #fbbc04;
+}
+
+.legend-color.high {
+  background: #ea4335;
+}
+
+/* Emergency Contacts */
+.emergency-contacts {
+  border-top: 1px solid #e9ecef;
+  padding-top: 20px;
+}
+
+.emergency-contacts h3 {
+  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  padding: 10px 12px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #555;
+  border-left: 3px solid #ea4335;
+}
+
+.contact-item strong {
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ward-details {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .info-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
+/* ML Models Section */
+.ml-models-section {
+  margin: 20px 0;
+  padding: 16px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border-left: 4px solid #007bff;
+}
+
+.ml-models-section h4 {
+  margin: 0 0 16px 0;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.model-result {
+  margin-bottom: 12px;
+  padding: 12px;
+  background: white;
+  border-radius: 6px;
+  border: 1px solid #e9ecef;
+}
+
+.model-result:last-child {
+  margin-bottom: 0;
+}
+
+.model-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.model-header strong {
+  font-size: 13px;
+  color: #495057;
+}
+
+.confidence-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.model-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.model-details span {
+  font-size: 12px;
+  color: #666;
+}
+
+.model-details .risk-level {
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.overall-assessment {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 8px;
+  border: 1px solid #dee2e6;
+}
+
+.overall-assessment .risk-status {
+  margin-bottom: 12px;
+}
+
+.overall-assessment .risk-description {
+  font-size: 13px;
+  color: #495057;
+  font-weight: 500;
+  line-height: 1.4;
+}

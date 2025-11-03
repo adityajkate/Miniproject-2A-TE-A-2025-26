@@ -1,0 +1,122 @@
+.info-panel {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  z-index: 1000;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.info-panel h3 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 18px;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 8px;
+}
+
+.instruction {
+  color: #666;
+  font-style: italic;
+  margin: 0;
+}
+
+.ward-info h4 {
+  margin: 0 0 15px 0;
+  color: #333;
+  font-size: 16px;
+}
+
+.loading {
+  text-align: center;
+  color: #007bff;
+}
+
+.prediction-result {
+  margin-top: 15px;
+}
+
+.risk-level {
+  margin-bottom: 10px;
+}
+
+.risk-badge {
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.probability {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.description {
+  margin-top: 10px;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #555;
+  border-left: 4px solid #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .info-panel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    left: 10px;
+    width: auto;
+    padding: 15px;
+    max-height: calc(100vh - 100px);
+    overflow-y: auto;
+  }
+
+  .info-panel h3 {
+    font-size: 16px;
+  }
+
+  .ward-info h4 {
+    font-size: 14px;
+  }
+
+  .risk-badge {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .probability {
+    font-size: 12px;
+  }
+
+  .description {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .info-panel {
+    padding: 12px;
+  }
+
+  .info-panel h3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .ward-info h4 {
+    font-size: 13px;
+    margin-bottom: 10px;
+  }
+}

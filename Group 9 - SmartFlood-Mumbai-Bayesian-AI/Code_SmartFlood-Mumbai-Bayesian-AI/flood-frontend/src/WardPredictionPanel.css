@@ -1,0 +1,467 @@
+/* Ward Prediction Panel Styles */
+.ward-prediction-panel {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+  max-width: 800px;
+}
+
+.panel-header {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.panel-header h3 {
+  color: #2c3e50;
+  margin: 0 0 8px 0;
+  font-size: 1.5rem;
+}
+
+.panel-header p {
+  color: #7f8c8d;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* Ward Selection */
+.ward-selection {
+  margin-bottom: 24px;
+}
+
+.ward-selection label {
+  display: block;
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 8px;
+}
+
+.ward-dropdown {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #bdc3c7;
+  border-radius: 8px;
+  font-size: 1rem;
+  background: white;
+  transition: border-color 0.3s ease;
+}
+
+.ward-dropdown:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Current Status */
+.current-status {
+  margin-bottom: 24px;
+}
+
+.current-status h4 {
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+  font-size: 1.2rem;
+}
+
+.status-card {
+  border-radius: 8px;
+  padding: 16px;
+  border-left: 4px solid;
+  background: #f8f9fa;
+}
+
+.status-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ward-name {
+  font-weight: 600;
+  color: #2c3e50;
+  font-size: 1.1rem;
+}
+
+.risk-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.status-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-size: 0.9rem;
+}
+
+.status-item span:first-child {
+  color: #7f8c8d;
+}
+
+.status-item span:last-child {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.fresh {
+  color: #27ae60 !important;
+}
+
+.stale {
+  color: #e67e22 !important;
+}
+
+.recommendation {
+  background: rgba(255, 255, 255, 0.7);
+  padding: 12px;
+  border-radius: 6px;
+  margin-top: 8px;
+}
+
+.recommendation strong {
+  color: #2c3e50;
+}
+
+.recommendation p {
+  margin: 4px 0 0 0;
+  color: #34495e;
+  font-size: 0.9rem;
+}
+
+/* Risk Level Colors */
+.risk-critical {
+  border-left-color: #e74c3c;
+  background: #fdf2f2;
+}
+
+.risk-critical .risk-badge {
+  background: #e74c3c;
+  color: white;
+}
+
+.risk-high {
+  border-left-color: #f39c12;
+  background: #fef9e7;
+}
+
+.risk-high .risk-badge {
+  background: #f39c12;
+  color: white;
+}
+
+.risk-medium {
+  border-left-color: #f1c40f;
+  background: #fffbf0;
+}
+
+.risk-medium .risk-badge {
+  background: #f1c40f;
+  color: #2c3e50;
+}
+
+.risk-low {
+  border-left-color: #27ae60;
+  background: #f0f9f4;
+}
+
+.risk-low .risk-badge {
+  background: #27ae60;
+  color: white;
+}
+
+.risk-unknown {
+  border-left-color: #95a5a6;
+  background: #f8f9fa;
+}
+
+.risk-unknown .risk-badge {
+  background: #95a5a6;
+  color: white;
+}
+
+/* Input Section */
+.input-section {
+  margin-bottom: 24px;
+}
+
+.input-section h4 {
+  color: #2c3e50;
+  margin: 0 0 16px 0;
+  font-size: 1.2rem;
+}
+
+.input-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  font-weight: 600;
+  color: #34495e;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+}
+
+.input-field {
+  padding: 10px 12px;
+  border: 2px solid #bdc3c7;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.predict-button {
+  width: 100%;
+  padding: 14px 20px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.predict-button:hover:not(:disabled) {
+  background: linear-gradient(135deg, #2980b9, #21618c);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+}
+
+.predict-button:disabled {
+  background: #bdc3c7;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Error Section */
+.error-section {
+  margin: 16px 0;
+}
+
+.error-message {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #fdf2f2;
+  border: 1px solid #e74c3c;
+  border-radius: 6px;
+  color: #c0392b;
+  font-weight: 500;
+}
+
+.error-icon {
+  font-size: 1.2rem;
+}
+
+/* Prediction Results */
+.prediction-results {
+  margin-top: 24px;
+}
+
+.prediction-results h4 {
+  color: #2c3e50;
+  margin: 0 0 16px 0;
+  font-size: 1.2rem;
+}
+
+.assessment-card {
+  border-radius: 8px;
+  padding: 20px;
+  border-left: 4px solid;
+  background: #f8f9fa;
+  margin-bottom: 20px;
+}
+
+.assessment-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.assessment-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.metric {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.metric-label {
+  color: #7f8c8d;
+  font-weight: 500;
+}
+
+.metric-value {
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+/* Model Results */
+.model-results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.model-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.model-card h5 {
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #ecf0f1;
+}
+
+.model-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.model-metrics .metric {
+  border-bottom: 1px solid #ecf0f1;
+  padding: 6px 0;
+}
+
+/* Route Status */
+.route-status {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.route-status h5 {
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+  font-size: 1rem;
+}
+
+.route-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.route-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.available {
+  color: #27ae60;
+  font-weight: 600;
+}
+
+.unavailable {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+/* Timestamp */
+.prediction-timestamp {
+  text-align: center;
+  padding: 12px;
+  background: #ecf0f1;
+  border-radius: 6px;
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* No Selection */
+.no-selection {
+  text-align: center;
+  padding: 40px 20px;
+  color: #7f8c8d;
+}
+
+.no-selection-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.no-selection p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .ward-prediction-panel {
+    margin: 10px;
+    padding: 16px;
+  }
+  
+  .input-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .assessment-metrics {
+    grid-template-columns: 1fr;
+  }
+  
+  .model-results {
+    grid-template-columns: 1fr;
+  }
+  
+  .status-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  
+  .assessment-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+}

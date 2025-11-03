@@ -1,0 +1,350 @@
+/* Global CSS Fixes and Improvements */
+
+/* Reset and Base Styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Improved Focus Styles for Accessibility */
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid #0d6efd;
+  outline-offset: 2px;
+}
+
+/* Better Button Styles */
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+/* Improved Form Elements */
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Better Scrollbar Styles for All Browsers */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #ced4da #f1f1f1;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #ced4da;
+  border-radius: 4px;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: #adb5bd;
+}
+
+/* Improved Animation Performance */
+.loading-spinner,
+.spinner,
+.map-loading-spinner {
+  will-change: transform;
+}
+
+/* Better Text Selection */
+::selection {
+  background-color: #0d6efd;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #0d6efd;
+  color: white;
+}
+
+/* Improved Grid and Flexbox Fallbacks */
+.stats-cards,
+.weather-grid,
+.ward-grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Support for older browsers */
+@supports not (gap: 1rem) {
+  .stats-cards > *,
+  .weather-grid > *,
+  .ward-grid > * {
+    margin: 0.5rem;
+  }
+}
+
+/* Better Transform Support */
+.stats-card:hover,
+.ward-tile:hover,
+.weather-widget:hover {
+  -webkit-transform: translateY(-2px);
+  -moz-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+}
+
+/* Improved Gradient Support */
+.temp-value {
+  background: #3b82f6; /* Fallback */
+  background: -webkit-linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: -moz-linear-gradient(135deg, #3b82f6, #1d4ed8);
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+/* Better Backdrop Filter Support */
+.bulk-predict-btn,
+.clear-btn {
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+/* Fallback for browsers without backdrop-filter */
+@supports not (backdrop-filter: blur(10px)) {
+  .bulk-predict-btn,
+  .clear-btn {
+    background: rgba(255, 255, 255, 0.4);
+  }
+}
+
+/* Improved Aspect Ratio Support */
+.ward-tile {
+  aspect-ratio: 1;
+}
+
+/* Fallback for browsers without aspect-ratio */
+@supports not (aspect-ratio: 1) {
+  .ward-tile {
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+  }
+
+  .ward-tile > * {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Better Print Styles */
+@media print {
+  .notification-toast,
+  .loading-overlay,
+  .map-loading-overlay {
+    display: none !important;
+  }
+
+  .map-section,
+  .details-section {
+    break-inside: avoid;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* High Contrast Mode Improvements */
+@media (prefers-contrast: high) {
+  .stats-card,
+  .weather-widget,
+  .flood-prediction-panel {
+    border: 2px solid black !important;
+  }
+
+  .risk-badge,
+  .status-indicator {
+    border: 2px solid black !important;
+  }
+}
+
+/* Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .loading-spinner,
+  .spinner,
+  .map-loading-spinner {
+    animation: none !important;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1a1a;
+    --text-color: #ffffff;
+    --card-bg: #2d2d2d;
+    --border-color: #404040;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+  }
+
+  .stats-card,
+  .weather-widget,
+  .flood-prediction-panel,
+  .ward-details,
+  .info-panel {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    color: var(--text-color);
+  }
+}
+
+/* Better Mobile Touch Targets */
+@media (max-width: 768px) {
+  button,
+  .tab-button,
+  .ward-tile {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .refresh-btn,
+  .retry-btn,
+  .bulk-predict-btn,
+  .clear-btn {
+    padding: 12px 16px;
+  }
+}
+
+/* Improved Loading States */
+.loading-state,
+.no-selection,
+.error-state {
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* Better Error Handling */
+.error-banner,
+.notification-toast.error {
+  border-left: 4px solid #dc3545;
+}
+
+.error-banner.warning,
+.notification-toast.warning {
+  background-color: #fff3cd;
+  color: #856404;
+  border-left: 4px solid #ffc107;
+}
+
+.error-banner.success,
+.notification-toast.success {
+  background-color: #d1e7dd;
+  color: #0f5132;
+  border-left: 4px solid #198754;
+}
+
+/* Improved Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+  margin-top: 0;
+}
+
+p {
+  line-height: 1.6;
+}
+
+/* Better Link Styles */
+a {
+  color: #0d6efd;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #0b5ed7;
+  text-decoration: underline;
+}
+
+/* Improved Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid #dee2e6;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+/* Better Form Validation */
+.form-control.is-invalid {
+  border-color: #dc3545;
+  box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
+}
+
+.form-control.is-valid {
+  border-color: #198754;
+  box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.25);
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.valid-feedback {
+  color: #198754;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}

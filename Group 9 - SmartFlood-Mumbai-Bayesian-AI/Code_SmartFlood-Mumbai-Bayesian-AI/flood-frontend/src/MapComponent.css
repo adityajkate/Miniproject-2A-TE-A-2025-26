@@ -1,0 +1,160 @@
+/* Map Component Container */
+.map-component-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  overflow: hidden; /* Prevent map internals from creating page scroll */
+}
+
+/* Map Container Styling */
+.leaflet-container {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  height: 100% !important;
+  width: 100% !important;
+  overflow: hidden !important; /* Ensure tiles/tooltips don't extend the page */
+}
+
+/* Custom Tooltip Styling */
+.custom-tooltip {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 2px solid #007bff !important;
+  border-radius: 8px !important;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  /* Use padding on the inner container instead */
+  padding: 0 !important;
+}
+
+.tooltip-container {
+  padding: 8px 12px;
+  min-width: 150px;
+}
+
+.tooltip-title {
+  font-weight: bold;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.tooltip-ward-code {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 6px;
+}
+
+.tooltip-prediction-details {
+  font-size: 12px;
+}
+
+.tooltip-risk-level {
+  font-weight: bold;
+}
+
+.tooltip-risk-level.risk-level-low {
+  color: #34a853;
+}
+
+.tooltip-risk-level.risk-level-medium {
+  color: #fbbc04;
+}
+
+.tooltip-risk-level.risk-level-high {
+  color: #ea4335;
+}
+
+.tooltip-risk-level.risk-level-critical {
+  color: #ea4335;
+}
+
+.tooltip-no-prediction {
+  font-size: 12px;
+  color: #007bff;
+  font-style: italic;
+}
+
+.custom-tooltip::before {
+  border-top-color: #007bff !important;
+}
+
+.leaflet-tooltip-top.custom-tooltip::before {
+  border-top-color: #007bff !important;
+}
+
+.leaflet-tooltip-bottom.custom-tooltip::before {
+  border-bottom-color: #007bff !important;
+}
+
+.leaflet-tooltip-left.custom-tooltip::before {
+  border-left-color: #007bff !important;
+}
+
+.leaflet-tooltip-right.custom-tooltip::before {
+  border-right-color: #007bff !important;
+}
+
+/* Map Controls Styling */
+.leaflet-control-zoom a {
+  background-color: #fff !important;
+  border: 2px solid #007bff !important;
+  color: #007bff !important;
+  font-weight: bold !important;
+  border-radius: 6px !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+  transition: all 0.2s ease !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #007bff !important;
+  color: white !important;
+  -webkit-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.leaflet-control-zoom {
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Attribution Styling */
+.leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 6px !important;
+  border: 1px solid #ddd !important;
+  font-size: 11px !important;
+}
+
+/* Interactive States */
+.leaflet-interactive {
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.leaflet-interactive:hover {
+  filter: brightness(1.1) !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .custom-tooltip {
+    font-size: 12px !important;
+  }
+
+  .leaflet-control-zoom {
+    margin-top: 10px !important;
+    margin-left: 10px !important;
+  }
+}
+
+/* High contrast mode for accessibility */
+@media (prefers-contrast: high) {
+  .custom-tooltip {
+    background: white !important;
+    border: 3px solid black !important;
+    color: black !important;
+  }
+}
